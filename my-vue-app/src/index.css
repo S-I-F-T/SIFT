@@ -1,7 +1,36 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
     Arial, sans-serif;
+  background-color: #343434;
   margin: auto;
-  max-width: 38rem;
-  padding: 2rem;
+  /* max-width: 38rem; */
+  /* padding: 2rem; */
+}
+
+
+.header{
+  max-width: 100%;
+  background-color: aqua;
+  /* padding: 2em; */
+}
+
+.mainBody{
+  display:flex;
+  padding-right: 1rem;
+  /* max-width: 100%; */
+}
+
+.navbar{
+  padding:2rem;
+  flex:1;
+  max-width: 8rem;
+  display:flex;
+  flex-direction: column;
+}
+
+.mainContent{
+  flex:7;
+  background-color: #575757;
+  padding:1rem;
+  /* max-width: 100%; */
 }
