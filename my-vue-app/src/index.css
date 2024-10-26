@@ -9,9 +9,12 @@ body {
 
 
 .header{
+  display:flex;
+  justify-content: center;
   max-width: 100%;
-  background-color: aqua;
-  /* padding: 2em; */
+  /* background-color: aqua; */
+  margin: 1em;
+  color: #fff
 }
 
 .mainBody{
@@ -21,11 +24,18 @@ body {
 }
 
 .navbar{
-  padding:2rem;
-  flex:1;
+  padding:1rem;
+  flex:2;
   max-width: 8rem;
   display:flex;
   flex-direction: column;
+  color: #fff
+}
+
+.navbar li{
+  margin:1em;
+  font-size:1em;
+  list-style: none;
 }
 
 .mainContent{
