@@ -1,3 +1,5 @@
+const { text } = require("express");
+
 const form = document.querySelector('#img-form');
 const img = document.querySelector('#img');
 const outputPath = document.querySelector('#output-path');
@@ -9,7 +11,7 @@ function loadImage(e){
     const file = e.target.files[0]
 
     if(!isImage(file)){
-        console.log('Please select an image')
+        alertError('Please select an image')
         return
     }
 
@@ -23,12 +25,39 @@ function loadImage(e){
 
     form.style.display = 'block'
     filename.innerText = file.name
+    outputPath.innerText = path.join(os.homedir(), 'imageresizer')
 }
 
 // Make sure file is an image
 function isImage(file){
     const acceptedImageTypes = ['image/gif', 'image/jpeg', 'image/png']
     return file && acceptedImageTypes.includes(file.type)
+}
+
+function alertError(message){
+    Toastify.toast({
+        text: message,
+        duration: 5000,
+        close: false,
+        style: {
+            background: 'red',
+            color: 'white',
+            textAlign: 'center',
+        }
+    });
+}
+
+function alertSuccess(message){
+    Toastify.toast({
+        text: message,
+        duration: 5000,
+        close: false,
+        style: {
+            background: 'green',
+            color: 'white',
+            textAlign: 'center',
+        }
+    });
 }
 
 img.addEventListener('change', loadImage)
