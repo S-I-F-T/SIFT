@@ -10,33 +10,34 @@
       <h1>Welcome to Sift!</h1>
     </div>
     <div class = mainBody>
-      <div class="navbar">
-        <a><li>Auto-grader</li></a>
-        <a><li>About</li></a>
-        <hr>
-        <a><li>Settings</li></a>
-        <a><li>Shutdown</li></a>
-        
-      </div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="#" data-page="Auto-grader">Auto-grader</a></li>
+          <li><a href="#" data-page="About">About</a></li>
+          <hr>
+          <li><a href="#" data-page="Settings">Settings</a></li>
+          <li><a href="#">Shutdown</a></li>
+        </ul>
+      </nav>
+
       <div class="mainContent">
         <h2>mainContent</h2>
-        <div id="Auto-grader">
+        <div id="Auto-grader" class="page">
           <h2>Auto Grading page</h2>
         </div>
-        <div id="About">
+        <div id="About" class="page">
           <h2>About page</h2>
         </div>
-        <div id="settings">
+        <div id="settings" class="page">
           <h2>settings page</h2>
         </div>
-        
-
-
       </div>
     </div>
 
 
 
     <script type="module" src="/src/renderer.js"></script>
+    <script src="/src/script.js"></script>
+    
   </body>
 </html>
