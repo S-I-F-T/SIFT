@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>SIFT</title>
+
+  </head>
+  <body>
+    <div class="header">
+      <h1>Welcome to Sift!</h1>
+    </div>
+
+    <div class = mainBody>
+      <style>
+        .navbar a {
+          display: inline-block;
+          padding: 10px 20px;
+          background-color: #007BFF;
+          color: white;
+          text-decoration: none;
+          border-radius: 5px;
+          margin: 5px;
+        }
+        
+        .navbar a:hover {
+          background-color: #0056b3;
+        }
+      </style>
+      
+      <div class="navbar">
+        <a href="#" onclick="navigateTo('Auto-grader')">Autograder</a>
+        <a href="#" onclick="navigateTo('About')">About</a>
+        <hr>
+        <a href="#" onclick="navigateTo('Settings')">Settings</a>
+        <a href="#" onclick="navigateTo('Shutdown')">Shutdown</a>
+      </div>
+      
+      <div class="mainContent">
+        <h2>mainContent</h2>
+        <div id="Auto-grader">
+          <h2>Auto Grading page</h2>
+        </div>
+        <div id="About">
+          <h2>About page</h2>
+        </div>
+        <div id="settings">
+          <h2>settings page</h2>
+        </div>
+        
+
+
+      </div>
+    </div>
+
+    <script>
+      function navigateTo(page) {
+        const pages = ['Auto-grader', 'About', 'Settings', 'Shutdown'];
+        pages.forEach((p) => {
+          const el = document.getElementById(p);
+          if (el) {
+            el.style.display = 'none';
+          }
+        });
+        document.getElementById(page).style.display = 'block';
+      }
+    </script>
+
+
+    <script type="module" src="/src/renderer.js"></script>
+  </body>
+</html>
