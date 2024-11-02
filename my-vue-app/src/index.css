@@ -63,3 +63,22 @@ body {
   border-radius: 2rem;
   padding:1rem;
 }
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.mainContent {
+  display: none;
+}
+
+.mainContent .page:first-child {
+  display: block;
+}
