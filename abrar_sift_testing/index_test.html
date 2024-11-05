@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>SIFT</title>
+  <style>
+    /* General page layout */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    .header {
+      background-color: #007BFF;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .mainBody {
+      display: flex;
+      flex: 1;
+    }
+
+    /* Navbar styles */
+    .navbar {
+      background-color: #007BFF;
+      color: white;
+      width: 250px;
+      transition: width 0.3s;
+      overflow: hidden;
+      padding: 10px;
+    }
+
+    .navbar.collapsed {
+      width: 0;
+      padding: 0;
+    }
+
+    .navbar a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      margin: 10px 0;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .navbar a:hover {
+      background-color: #0056b3;
+    }
+
+    /* Main content styles */
+    .mainContent {
+      flex: 1;
+      padding: 20px;
+    }
+
+    /* Menu toggle button styles */
+    .menu-toggle {
+      font-size: 24px;
+      cursor: pointer;
+      padding: 10px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      margin: 10px;
+      border-radius: 5px;
+    }
+
+    .menu-toggle.burger {
+      display: none;
+    }
+
+    .navbar.collapsed ~ .menu-toggle.arrow {
+      display: none;
+    }
+
+    .navbar.collapsed ~ .menu-toggle.burger {
+      display: inline;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Welcome to Sift!</h1>
+  </div>
+
+  <div class="mainBody">
+    <div class="navbar" id="navbar">
+      <a href="#" onclick="navigateTo('Auto-grader')">Autograder</a>
+      <a href="#" onclick="navigateTo('About')">About</a>
+      <hr>
+      <a href="#" onclick="navigateTo('Settings')">Settings</a>
+      <a href="#" onclick="navigateTo('Shutdown')">Shutdown</a>
+    </div>
+
+    <button class="menu-toggle arrow" onclick="toggleMenu()">⮜</button>
+    <button class="menu-toggle burger" onclick="toggleMenu()">☰</button>
+
+    <div class="mainContent">
+      <h2>Main Content</h2>
+      <div id="Auto-grader" style="display: none;">
+        <h2>Auto Grading Page</h2>
+      </div>
+      <div id="About" style="display: none;">
+        <h2>About Page</h2>
+      </div>
+      <div id="Settings" style="display: none;">
+        <h2>Settings Page</h2>
+      </div>
+      <div id="Shutdown" style="display: none;">
+        <h2>Shutdown Page</h2>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const navbar = document.getElementById('navbar');
+      navbar.classList.toggle('collapsed');
+    }
+
+    function navigateTo(page) {
+      const pages = ['Auto-grader', 'About', 'Settings', 'Shutdown'];
+      pages.forEach((p) => {
+        const el = document.getElementById(p);
+        if (el) {
+          el.style.display = 'none';
+        }
+      });
+      document.getElementById(page).style.display = 'block';
+    }
+  </script>
+</body>
+</html>

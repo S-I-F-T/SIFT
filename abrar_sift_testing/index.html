@@ -12,6 +12,14 @@
 
     <div class = mainBody>
       <style>
+
+        /* Styles for navbar */
+        .navbar {
+          width: 250px;
+          transition: width 0.3s;
+          overflow: hidden;
+        }
+
         .navbar a {
           display: inline-block;
           padding: 10px 20px;
@@ -25,6 +33,31 @@
         .navbar a:hover {
           background-color: #0056b3;
         }
+
+        .navbar.collapsed {
+          width: 0;
+          height: 0;
+        }
+
+        /* Styles for the toggle button */
+        .menu-toggle {
+          cursor: pointer;
+          font-size: 24px;
+          margin: 10px;
+        }
+
+        /* Hide the icon when the navbar is open */
+        .menu-toggle.burger {
+          display: none;
+        }
+
+        .navbar.collapsed ~ .menu-toggle.arrow {
+          display: none;
+        }
+
+        .navbar.collapsed ~ .menu-toggle.burger {
+          display: inline;
+        }
       </style>
       
       <div class="navbar">
@@ -34,6 +67,9 @@
         <a href="#" onclick="navigateTo('Settings')">Settings</a>
         <a href="#" onclick="navigateTo('Shutdown')">Shutdown</a>
       </div>
+
+      <span class="menu-toggle arrow" onclick="toggleMenu()">➤</span>
+      <span class="menu-toggle burger" onclick="toggleMenu()">☰</span>
       
       <div class="mainContent">
         <h2>mainContent</h2>
@@ -53,6 +89,11 @@
     </div>
 
     <script>
+      function toggleMenu() {
+        const navbar = document.getElementById('navbar');
+        navbar.classList.toggle('collapsed');
+      }
+
       function navigateTo(page) {
         const pages = ['Auto-grader', 'About', 'Settings', 'Shutdown'];
         pages.forEach((p) => {
