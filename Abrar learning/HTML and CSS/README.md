@@ -6,3 +6,7 @@
 - Continued going through the YouTube course, went up to 3rd video
   - Finished learning about the common types of tags
   - Learned about how to use HTML forms
+
+**11/12**
+- Watched more of the YouTube course, getting through most of the fourth video
+  - Learned about some of the features of CSS

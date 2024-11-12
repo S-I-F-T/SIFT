@@ -1,0 +1,29 @@
+h1{
+    color: blue;
+    background-color: fuchsia;
+    font-size: 20px;
+    text-decoration: underline;
+    font-family: Helvetica, sans-serif;
+    text-align: center;
+}
+
+p{
+    color: red;
+    font-family: Helvetica, sans-serif;
+    line-height: 30px;
+    letter-spacing: 3px;
+    column-count: 5;
+}
+
+ul{
+   
+    border-bottom: 4px double crimson;
+    border-left: 8px dotted blue;
+    border-top: 2px dashed green;
+    border-right: 6px solid cyan;
+}
+
+li{
+    list-style-type: none;
+    text-shadow: 2px 2px 2px lightgray;
+}
