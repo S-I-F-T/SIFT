@@ -1,3 +1,19 @@
+
+
+/* Styles from fourth video */
+/* 
+span{
+    display: inline-block;
+    margin: 20px;
+    padding: 20px;
+}
+
+div{
+    border: solid 2px crimson;
+    margin: 20px;
+    padding: 20px;
+}
+
 h1{
     color: blue;
     background-color: fuchsia;
@@ -25,5 +41,5 @@ ul{
 
 li{
     list-style-type: none;
-    text-shadow: 2px 2px 2px lightgray;
-}
+    text-shadow: 2px 2px #E9E9E9;
+} */
