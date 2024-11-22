@@ -14,3 +14,6 @@
 **11/15**
 - Continued watching the YouTube course, finishing the fourth video and starting the fifth
   - Learned more about CSS
+
+**11/19**
+- Got through the fifth video in the YouTube course
