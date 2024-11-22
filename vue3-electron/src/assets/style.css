@@ -1,0 +1,17 @@
+.body{
+    display:block;
+    /* background-color: lime; */
+}
+.middle{
+    display:flex;
+    /* background-color: pink; */
+}
+
+.navBar{
+    background-color: grey;
+    flex:1
+}
+.mainContent{
+    background-color: #663399;
+    flex:3
+}

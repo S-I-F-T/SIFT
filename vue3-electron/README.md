@@ -15,6 +15,11 @@ npm run serve
 npm run build
 ```
 
+### Compiles and hot-reloads for development of electron app
+```
+npm run electron:serve
+```
+
 ### Lints and fixes files
 ```
 npm run lint
